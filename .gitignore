@@ -3,7 +3,7 @@
 .idea/*
 
 network-logs/
-data/
+data/*.mat
 Train_model/
 
 # Byte-compiled / optimized / DLL files
