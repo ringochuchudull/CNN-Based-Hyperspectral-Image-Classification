@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/ring0chu/Desktop/ARC2019/Model-tensorflow/Trained_model/"
+all_model_checkpoint_paths: "/home/ring0chu/Desktop/ARC2019/Model-tensorflow/Trained_model/"
