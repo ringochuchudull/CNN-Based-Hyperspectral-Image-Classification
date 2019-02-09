@@ -2,9 +2,9 @@
 # PyCharm 
 .idea/*
 
-network-logs/*
-
+network-logs/
 data/
+Train_model/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
