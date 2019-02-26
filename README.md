@@ -4,7 +4,7 @@
 
 This is a TensorFlow implementation of fixed size kernels network described in this <a href="">paper</a>.
 
-<img src="http://www.doc.ic.ac.uk/~swc3918/img/KSC.gif" width="40%"><br>
+<!-- <img src="http://www.doc.ic.ac.uk/~swc3918/img/KSC.gif" width="40%"><br> -->
 Figure 1. Hyperspectral image cube<br>
 
 <img src="http://www.doc.ic.ac.uk/~swc3918/img/arch_final-fixed.png" width="90%"><br>
@@ -63,7 +63,7 @@ python preprocess.py --channel_first True --data Indian_pines --train_ratio 0.15
 
 and run the special script for GPU
 ```buildoutcfg
-python network.py --data Indian_pines --epochs 650
+python network_GPU.py --data Indian_pines --epochs 650
 ```
 
 

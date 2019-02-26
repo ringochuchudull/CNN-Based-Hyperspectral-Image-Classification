@@ -12,7 +12,7 @@ parser = ArgumentParser()
 parser.add_argument('--data', type=str, default='Indian_pines', help='Indian_pines or Salinas or KSC or Botswana')
 parser.add_argument('--patch_size', type=int, default=5)
 parser.add_argument('--epochs', type=int, default=650)
-parser.add_argument('--device', type=str, default='CPU')
+parser.add_argument('--device', type=str, default='GPU')
 
 number_of_band = {'Indian_pines': 4, 'Salinas': 8, 'KSC': 8, 'Botswana': 1}
 

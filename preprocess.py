@@ -28,6 +28,8 @@ BAND = input_mat.shape[2]
 OUTPUT_CLASSES = np.max(target_mat)
 PATCH_SIZE = 5
 
+CHANNEL_FIRST = opt.channel_first
+
 # Normalize image data and select datatype
 input_mat = input_mat.astype(datatype)
 input_mat = input_mat - np.min(input_mat)
@@ -160,12 +162,11 @@ print("Size of Validation data: " + str(len(VAL_PATCH))  )
 print("Size of Testing data: " + str(len(TEST_PATCH)) )
 print("+-------------------------------------+")
 
-CHANNEL_FIRST = opt.channel_first
 
 train_idx = list(range(len(TRAIN_PATCH)))
 shuffle(train_idx)
 TRAIN_PATCH = TRAIN_PATCH[train_idx]
-if CHANNEL_FIRST:
+if not CHANNEL_FIRST:
     TRAIN_PATCH = np.transpose(TRAIN_PATCH, (0, 2, 3, 1))
 TRAIN_LABELS = OnehotTransform(TRAIN_LABELS[train_idx])
 train = {}
@@ -177,7 +178,7 @@ io.savemat("./data/" + opt.data + "_Train_patch_" + str(PATCH_SIZE) + ".mat", tr
 test_idx = list(range(len(TEST_PATCH)))
 shuffle(test_idx)
 TEST_PATCH = TEST_PATCH[test_idx]
-if CHANNEL_FIRST:
+if not CHANNEL_FIRST:
     TEST_PATCH = np.transpose(TEST_PATCH, (0, 2, 3, 1))
 TEST_LABELS = OnehotTransform(TEST_LABELS[test_idx])
 test = {}
@@ -189,8 +190,9 @@ io.savemat("./data/" + opt.data + "_Test_patch_" + str(PATCH_SIZE) + ".mat", tes
 val_idx = list(range(len(VAL_PATCH)))
 shuffle(val_idx)
 VAL_PATCH = VAL_PATCH[val_idx]
-if CHANNEL_FIRST:
+if not CHANNEL_FIRST:
     VAL_PATCH = np.transpose(VAL_PATCH, (0, 2, 3, 1))
+    print(VAL_PATCH.shape)
 VAL_LABELS = OnehotTransform(VAL_LABELS[val_idx])
 val = {}
 val["val_patch"] = VAL_PATCH
