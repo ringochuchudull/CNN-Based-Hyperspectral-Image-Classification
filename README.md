@@ -4,7 +4,7 @@
 
 This is a TensorFlow implementation of fixed size kernels network described in this <a href="">paper</a>.
 
-<!-- <img src="http://www.doc.ic.ac.uk/~swc3918/img/KSC.gif" width="40%"><br> -->
+<img src="http://www.doc.ic.ac.uk/~swc3918/img/KSC.gif" width="40%"><br>
 Figure 1. Hyperspectral image cube<br>
 
 <img src="http://www.doc.ic.ac.uk/~swc3918/img/arch_final-fixed.png" width="90%"><br>
