@@ -72,7 +72,7 @@ If you enjoyed our paper, you could cite it via this bibtex ❤
 
 @inproceedings{arc19liu,
   author    = {Shuanglong Liu and Ringo S.W. Chu and Xiwen Wang and Wayne Luk},
-  title     = {Optimizing CNN-based Hyperspectral ImageClassification on FPGAs},
+  title     = {Optimizing CNN-based Hyperspectral Image Classification on FPGAs},
   booktitle = {{ARC}},
   year      = {2019}
 }
